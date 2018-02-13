@@ -1,0 +1,243 @@
+int main(int argc, char** argv)
+{
+//
+int Roll1, Roll2, Roll3, Roll4, Roll5;
+int numberOf1s = 0, numberOf2s = 0, numberOf3s = 0, numberOf4s = 0, numberOf5s = 0, numberOf6s = 0;
+bool TwoOfaKind = false;
+bool ThreeOfaKind = false;
+cout << "Roll 5 dice. Enter them below." << endl;
+cout << "Roll 1: ";
+cin >> Roll1;
+cout << "Roll 2: ";
+cin >> Roll2;
+cout << "Roll 3: ";
+cin >> Roll3;
+cout << "Roll 4: ";
+cin >> Roll4;
+cout << "Roll 5: ";
+cin >> Roll5;
+
+if (Roll1 > 6 || Roll1 < 1 || Roll2 > 6 || Roll2 < 1 || Roll3 > 6 || Roll3 < 1 || Roll4 > 6 || Roll4 < 1 || Roll5 > 6 || Roll5 < 1 )
+{
+   exit(1);
+}
+
+if (Roll1 == 1)
+{
+    numberOf1s += 1;
+}
+if (Roll2 == 1)
+{
+    numberOf1s += 1;
+}
+if (Roll3 == 1)
+{
+    numberOf1s += 1;
+}
+if (Roll4 == 1)
+{
+    numberOf1s += 1;
+}
+if (Roll5 == 1)
+{
+    numberOf1s += 1;
+}
+cout << "There are " << numberOf1s << " ones." << endl;
+
+if (Roll1 == 2)
+{
+    numberOf2s += 1;
+}
+if (Roll2 == 2)
+{
+    numberOf2s += 1;
+}
+if (Roll3 == 2)
+{
+    numberOf2s += 1;
+}
+if (Roll4 == 2)
+{
+    numberOf2s += 1;
+}
+if (Roll5 == 2)
+{
+    numberOf2s += 1;
+}
+cout << "There are " << numberOf2s << " twos." << endl;
+
+if (Roll1 == 3)
+{
+    numberOf3s += 1;
+}
+if (Roll2 == 3)
+{
+    numberOf3s += 1;
+}
+if (Roll3 == 3)
+{
+    numberOf3s += 1;
+}
+if (Roll4 == 3)
+{
+    numberOf3s += 1;
+}
+if (Roll5 == 3)
+{
+    numberOf3s += 1;
+}
+cout << "There are " << numberOf3s << " threes." << endl;
+
+if (Roll1 == 4)
+{
+    numberOf4s += 1;
+}
+if (Roll2 == 4)
+{
+    numberOf4s += 1;
+}
+if (Roll3 == 4)
+{
+    numberOf4s += 1;
+}
+if (Roll4 == 4)
+{
+    numberOf4s += 1;
+}
+if (Roll5 == 4)
+{
+    numberOf4s += 1;
+}
+cout << "There are " << numberOf4s << " fours." << endl;
+
+if (Roll1 == 5)
+{
+    numberOf5s += 1;
+}
+if (Roll2 == 5)
+{
+    numberOf5s += 1;
+}
+if (Roll3 == 5)
+{
+    numberOf5s += 1;
+}
+if (Roll4 == 5)
+{
+    numberOf5s += 1;
+}
+if (Roll5 == 5)
+{
+    numberOf5s += 1;
+}
+cout << "There are " << numberOf5s << " fives." << endl;
+
+if (Roll1 == 6)
+{
+    numberOf6s += 1;
+}
+if (Roll2 == 6)
+{
+    numberOf6s += 1;
+}
+if (Roll3 == 6)
+{
+    numberOf6s += 1;
+}
+if (Roll4 == 6)
+{
+    numberOf6s += 1;
+}
+if (Roll5 == 6)
+{
+    numberOf6s += 1;
+}
+cout << "There are " << numberOf6s << " sixes." << endl << endl;
+if (numberOf1s == 2 || numberOf2s == 2 || numberOf3s == 2 || numberOf4s == 2 || numberOf5s == 2 || numberOf6s == 2)
+{
+    TwoOfaKind = true;
+}
+if (numberOf1s == 3 || numberOf2s == 3 || numberOf3s == 3 || numberOf4s == 3 || numberOf5s == 3 || numberOf6s == 3)
+{
+    cout << "Yes three of a kind!" << endl;
+    ThreeOfaKind = true;
+}
+else
+{
+    cout << "No three of a kind" << endl;
+}
+
+if (numberOf1s == 4 || numberOf2s == 4 || numberOf3s == 4 || numberOf4s == 4 || numberOf5s == 4 || numberOf6s == 4)
+{
+    cout << "Yes four of a kind!" << endl;
+}
+else
+{
+    cout << "No four of a kind" << endl;
+}
+
+if (numberOf1s == 5 || numberOf2s == 5 || numberOf3s == 5 || numberOf4s == 5 || numberOf5s == 5 || numberOf6s == 5)
+{
+    cout << "Yes five of a kind!" << endl;
+}
+else
+{
+    cout << "No five of a kind" << endl;
+}
+
+//
+if (TwoOfaKind == true && ThreeOfaKind == true)
+{
+     cout << "Yes Full House!" << endl;
+}
+else
+{
+    cout << "No Full House" << endl;
+}
+
+//
+if (Roll1 == Roll2 && Roll2 == Roll3 && Roll3 == Roll4 && Roll4 == Roll5)
+{
+    cout << "No Long Straight" << endl;
+}
+else
+{
+    if (((Roll1 >= 1 && Roll1 < 6) && (Roll2 >= 1 && Roll2 < 6) && (Roll3 >= 1 && Roll3 < 6) && (Roll4 >= 1 && Roll4 < 6) && (Roll5 >= 1 && Roll5 < 6)) && (Roll1 != Roll2 && Roll2 != Roll3 && Roll3 != Roll4 && Roll4 != Roll5))
+    {
+        cout << "Yes Long Straight!" << endl;
+    }
+    else if (((Roll1 > 1 && Roll1 <= 6) && (Roll2 > 1 && Roll2 <= 6) && (Roll3 > 1 && Roll3 <= 6) && (Roll4 > 1 && Roll4 <= 6) && (Roll5 > 1 && Roll5 <= 6)) && (Roll1 != Roll2 && Roll2 != Roll3 && Roll3 != Roll4 && Roll4 != Roll5))
+    {
+        cout << "Yes Long Straight!" << endl;
+    }
+    else
+    {
+        cout << "No Long Straight" << endl;
+    }
+
+//***HELP ME HERE PLEASE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!***
+if (Roll1 == Roll2 && Roll2 == Roll3 && Roll3 == Roll4 && Roll4 == Roll5)
+{
+    cout << "No Small Straight" << endl;
+}
+else
+{
+    if (((Roll1 > 1 && Roll1 <= 4) && (Roll2 > 1 && Roll2 <= 4) && (Roll3 > 1 && Roll3 <= 4) && (Roll4 > 1 && Roll4 <= 4) && (Roll5 > 1 && Roll5 <= 4)) && (Roll1 != Roll2 && Roll2 != Roll3 && Roll3 != Roll4 && Roll4 != Roll5))
+    {
+        cout << "Yes Small Straight!" << endl;
+    }
+    else if (((Roll1 > 1 && Roll1 <= 5) && (Roll2 > 1 && Roll2 <= 5) && (Roll3 > 1 && Roll3 <= 5) && (Roll4 > 1 && Roll4 <= 5) && (Roll5 > 1 && Roll5 <= 5)) && (Roll1 != Roll2 && Roll2 != Roll3 && Roll3 != Roll4 && Roll4 != Roll5))
+    {
+        cout << "Yes Small Straight!" << endl;
+    }
+    else if (((Roll1 > 2 && Roll1 <= 6) && (Roll2 > 2 && Roll2 <= 6) && (Roll3 > 2 && Roll3 <= 6) && (Roll4 > 2 && Roll4 <= 6) && (Roll5 > 2 && Roll5 <= 6)) && (Roll1 != Roll2 && Roll2 != Roll3 && Roll3 != Roll4 && Roll4 != Roll5))
+    {
+        cout << "Yes Small Straight!" << endl;
+    }
+   else
+   {
+       cout << "No Small Straight" << endl;
+   }
+}
+
+return 0;

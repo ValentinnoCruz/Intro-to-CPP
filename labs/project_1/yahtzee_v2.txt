@@ -1,0 +1,654 @@
+// dice.cpp :
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+void diceRoll();
+void dice1();
+void dice2();
+void dice3();
+void dice4();
+void dice5();
+void dice6();
+using namespace std;
+
+int getNum();
+int main()
+{
+srand(static_cast<int>(time(0)));
+diceRoll();
+cout<<"Thanks for rollin my dice"<<endl;
+system("pause");
+        return 0;
+}
+
+void diceRoll()
+{
+int roll1=0;
+int roll2=0;
+int roll3=0;
+int roll4=0;
+int roll5=0;
+char selection='y';
+bool re1=' ';
+bool re2=' ';
+bool re3=' ';
+bool re4=' ';
+bool re5=' ';
+char choice1=' ';
+char choice2=' ';
+char choice3=' ';
+char choice4=' ';
+char choice5=' ';
+do{
+cout<<"roll dice"<<endl;
+roll1=getNum();
+roll2=getNum();
+roll3=getNum();
+roll4=getNum();
+roll5=getNum();
+
+    switch(roll1)
+    {
+    case 1:
+        dice1();
+    break;
+
+    case 2:
+        dice2();
+    break;
+
+    case 3:
+        dice3();
+    break;
+
+    case 4:
+        dice4();
+    break;
+
+    case 5:
+        dice5();
+    break;
+
+    case 6:
+        dice6();
+    break;
+
+    }//endSwitch
+
+    switch(roll2)
+    {
+    case 1:
+        dice1();
+    break;
+
+    case 2:
+        dice2();
+    break;
+
+    case 3:
+        dice3();
+    break;
+
+    case 4:
+        dice4();
+    break;
+
+    case 5:
+        dice5();
+    break;
+
+    case 6:
+        dice6();
+    break;
+
+    }//endSwitch
+
+
+    switch(roll3)
+    {
+    case 1:
+        dice1();
+    break;
+
+    case 2:
+        dice2();
+    break;
+
+    case 3:
+        dice3();
+    break;
+
+    case 4:
+        dice4();
+    break;
+
+    case 5:
+        dice5();
+    break;
+
+    case 6:
+        dice6();
+    break;
+
+    }//endSwitch
+
+    switch(roll4)
+    {
+    case 1:
+        dice1();
+    break;
+
+    case 2:
+        dice2();
+    break;
+
+    case 3:
+        dice3();
+    break;
+
+    case 4:
+        dice4();
+    break;
+
+    case 5:
+        dice5();
+    break;
+
+    case 6:
+        dice6();
+    break;
+
+    }//endSwitch
+
+
+    switch(roll5)
+    {
+    case 1:
+        dice1();
+    break;
+
+    case 2:
+        dice2();
+    break;
+
+    case 3:
+        dice3();
+    break;
+
+    case 4:
+        dice4();
+    break;
+
+    case 5:
+        dice5();
+    break;
+
+    case 6:
+        dice6();
+    break;
+
+    }//endSwitch
+cout<<"would you like to re-roll die 1 (y/n)"<<endl;
+cin>>choice1;
+if(choice1=='y')
+{
+    re1=true;
+}
+    if(re1=true)
+    {
+    roll1=getNum();
+    switch(roll1)
+    {
+    case 1:
+        dice1();
+    break;
+
+    case 2:
+        dice2();
+    break;
+
+    case 3:
+        dice3();
+    break;
+
+    case 4:
+        dice4();
+    break;
+
+    case 5:
+        dice5();
+    break;
+
+    case 6:
+        dice6();
+    break;
+
+    }//endSwitch
+}//endif
+    if(choice1=='n')
+    {
+        cout<<roll1;
+    }
+
+
+cout<<"would you like to re-roll die 2 (y/n)"<<endl;
+cin>>choice2;
+if(choice2=='y')
+{
+    re2=true;
+}
+    if(re2=true)
+    {
+    roll2=getNum();
+    switch(roll2)
+    {
+    case 1:
+        dice1();
+    break;
+
+    case 2:
+        dice2();
+    break;
+
+    case 3:
+        dice3();
+    break;
+
+    case 4:
+        dice4();
+    break;
+
+    case 5:
+        dice5();
+    break;
+
+    case 6:
+        dice6();
+    break;
+
+    }//endSwitch
+    }//endif
+
+cout<<"would you like to re-roll die 3 (y/n)"<<endl;
+cin>>choice3;
+if(choice3=='y')
+{
+    re3=true;
+}
+    if(re3=true)
+    {
+    roll3=getNum();
+    switch(roll3)
+    {
+    case 1:
+        dice1();
+    break;
+
+    case 2:
+        dice2();
+    break;
+
+    case 3:
+        dice3();
+    break;
+
+    case 4:
+        dice4();
+    break;
+
+    case 5:
+        dice5();
+    break;
+
+    case 6:
+        dice6();
+    break;
+
+    }//endSwitch
+    }//endif
+
+cout<<"would you like to re-roll die 4 (y/n)"<<endl;
+cin>>choice4;
+if(choice4=='y')
+{
+    re4=true;
+}
+    if(re4=true)
+    {
+    roll4=getNum();
+    switch(roll4)
+    {
+    case 1:
+        dice1();
+    break;
+
+    case 2:
+        dice2();
+    break;
+
+    case 3:
+        dice3();
+    break;
+
+    case 4:
+        dice4();
+    break;
+
+    case 5:
+        dice5();
+    break;
+
+    case 6:
+        dice6();
+    break;
+
+    }//endSwitch
+    }//endif
+
+cout<<"would you like to re-roll die 5 (y/n)"<<endl;
+cin>>choice5;
+if(choice5=='y')
+{
+    re5=true;
+}
+    if(re5=true)
+    {
+    roll5=getNum();
+
+    switch(roll5)
+    {
+    case 1:
+        dice1();
+    break;
+
+    case 2:
+        dice2();
+    break;
+
+    case 3:
+        dice3();
+    break;
+
+    case 4:
+        dice4();
+    break;
+
+    case 5:
+        dice5();
+    break;
+
+    case 6:
+        dice6();
+    break;
+
+    }//endSwitch
+    }//endif
+
+cin>>selection;
+system("cls");
+}while(selection=='y');
+
+}
+int getNum()
+{
+int randNumber=0;
+randNumber = 1+ rand() % (6-1+1);
+return randNumber;
+}
+void dice1()
+{
+for(int row=0;row<5;row++)          
+{   
+   for(int spacer=0;spacer<8;spacer++)      
+    {
+
+        if(row==0||row==4)
+        {
+            cout<<"*";
+        }
+
+
+        if(row==1||row==3)
+        {
+            if(spacer==0||spacer==7)
+            {
+                cout<<"*";
+            }
+            else
+                cout<<" ";
+        }
+        if (row==2)
+            {
+            if(spacer==1||spacer==2||spacer==3||spacer==5||spacer==6)
+               {
+                 cout<<" ";
+               }//endif
+            if(spacer==4)
+               {
+                 cout<<"x";
+               }//endif
+            if(spacer==0||spacer==7)
+                {
+                cout<<"*";
+                }
+             }
+
+     }//endfor
+
+    cout<<endl;
+}   
+}
+void dice2()
+{
+for(int row=0;row<5;row++)          
+{   
+   for(int spacer=0;spacer<8;spacer++)      
+    {
+
+        if(row==0||row==4)
+        {
+            cout<<"*";
+        }
+
+
+
+        if (row==1||row==3)
+            {
+            if(spacer==1||spacer==2||spacer==3||spacer==5||spacer==6)
+               {
+                 cout<<" ";
+               }//endif
+            if(spacer==4)
+               {
+                 cout<<"x";
+               }//endif
+            if(spacer==0||spacer==7)
+                {
+                cout<<"*";
+                }
+             }
+          if(row==2)
+          {
+          if(spacer==0||spacer==7)
+            {
+              cout<<"*";
+            }             
+          else
+            cout<<" ";
+          }
+
+     }//endfor
+
+    cout<<endl;
+}
+}
+void dice3()
+{
+for(int row=0;row<5;row++)          
+{   
+   for(int spacer=0;spacer<8;spacer++)      
+    {
+
+        if(row==0||row==4)
+        {
+            cout<<"*";
+        }
+
+
+
+        if (row==1||row==2||row==3)
+            {
+            if(spacer==1||spacer==2||spacer==3||spacer==5||spacer==6)
+               {
+                 cout<<" ";
+               }//endif
+            if(spacer==4)
+               {
+                 cout<<"x";
+               }//endif
+            if(spacer==0||spacer==7)
+                {
+                cout<<"*";
+                }
+             }
+
+     }//endfor
+
+    cout<<endl;
+}
+
+}
+void dice4()
+{
+for(int row=0;row<5;row++)          
+{   
+   for(int spacer=0;spacer<8;spacer++)      
+    {
+
+        if(row==0||row==4)
+        {
+            cout<<"*";
+        }
+
+        if (row==2)
+        {
+
+if(spacer==1||spacer==2||spacer==3||spacer==4||spacer==5||spacer==6)
+            {
+            cout<<" ";
+            }
+            if(spacer==0||spacer==7)
+            {
+            cout<<"*";
+            }
+        }
+
+        if (row==1||row==3)
+            {
+            if(spacer==1||spacer==3||spacer==4||spacer==6)
+               {
+                 cout<<" ";
+               }//endif
+            if(spacer==2||spacer==5)
+               {
+                 cout<<"x";
+               }//endif
+            if(spacer==0||spacer==7)
+                {
+                cout<<"*";
+                }
+            }//endif
+
+
+   }//endfor
+
+    cout<<endl;
+}
+}
+void dice5()
+{
+for(int row=0;row<5;row++)          
+{   
+   for(int spacer=0;spacer<8;spacer++)      
+    {
+
+        if(row==0||row==4)
+        {
+            cout<<"*";
+        }
+
+        if (row==2)
+            {
+            if(spacer==1||spacer==2||spacer==3||spacer==5||spacer==6)
+               {
+                 cout<<" ";
+               }//endif
+            if(spacer==4)
+               {
+                 cout<<"x";
+               }//endif
+            if(spacer==0||spacer==7)
+                {
+                cout<<"*";
+                }
+             }
+
+
+        if (row==1||row==3)
+            {
+            if(spacer==1||spacer==3||spacer==4||spacer==6)
+               {
+                 cout<<" ";
+               }//endif
+            if(spacer==2||spacer==5)
+               {
+                 cout<<"x";
+               }//endif
+            if(spacer==0||spacer==7)
+                {
+                cout<<"*";
+                }
+            }//endif
+
+
+   }//endfor
+
+    cout<<endl;
+}
+}
+void dice6()
+{
+for(int row=0;row<5;row++)          
+{   
+   for(int spacer=0;spacer<8;spacer++)      
+    {
+
+        if (row==1||row==2||row==3)
+            {
+            if(spacer==1||spacer==3||spacer==4||spacer==6)
+               {
+                 cout<<" ";
+               }//endif
+            if(spacer==2||spacer==5)
+               {
+                 cout<<"x";
+               }//endif
+            if(spacer==0||spacer==7)
+                {
+                cout<<"*";
+                }
+            }//endif
+        else
+        {
+         cout<<"*";
+        }
+
+   }//endfor
+
+    cout<<endl;
+}
+ }
